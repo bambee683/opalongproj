@@ -1,0 +1,64 @@
+/* Root container with centered layout */
+#root {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f8fbff, #f0f4ff);
+  color: #2e3a59;
+}
+
+/* Logo style and subtle glow */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 0 transparent);
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1.5em #8c9effaa);
+  transform: scale(1.05);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5em #80d8ffaa);
+}
+
+/* Logo spinning animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Only spin logo if animations are not disabled by user */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card style with modern touch */
+.card {
+  background-color: #ffffff;
+  margin: 1.5rem auto;
+  padding: 2.5em;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Documentation hint text */
+.read-the-docs {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #607d8b;
+  font-style: italic;
+}
